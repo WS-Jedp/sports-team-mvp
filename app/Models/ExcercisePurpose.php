@@ -11,6 +11,8 @@ class ExcercisePurpose extends Model
 
     public $timestamps = false;
 
+    protected $fillable = ['title', 'description'];
+
     public function Excercises()
     {
         return $this->belongsToMany(Excercise::class, 'excercises_has_purposes', 'excercise_id', 'purpose_id');

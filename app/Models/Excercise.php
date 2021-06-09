@@ -9,6 +9,10 @@ class Excercise extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title', 'description', 'cover_url', 'video_url', 'type_id', 'purposes'
+    ];
+
     public function Type()
     {
         return $this->belongsTo(ExcerciseType::class, 'type_id', 'id');

@@ -9,4 +9,6 @@ class ExcercisesHasPurposes extends Model
 {
     use HasFactory;
     public $timestamps = false;
+
+    protected $fillable = ['exercise_id', 'purpose_id'];
 }

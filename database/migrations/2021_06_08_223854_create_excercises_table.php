@@ -17,9 +17,8 @@ class CreateExcercisesTable extends Migration
             $table->id();
             $table->tinyText('title');
             $table->text('description');
-            $table->text('purposes');
-            $table->text('cover')->nullable();
-            $table->text('video')->nullable();
+            $table->text('cover_url')->nullable();
+            $table->text('video_url')->nullable();
 
             $table->foreignId('type_id')->constrained('excercise_types');
 

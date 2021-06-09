@@ -10,6 +10,10 @@ class TrainingSchedule extends Model
     use HasFactory;
     public $timestamps = false;
 
+    protected $fillable = [
+        'datetime', 'team_id', 'state'
+    ];
+
     public function Attendances()
     {
         return $this->hasMany(Attendance::class, 'schedule_id', 'id');

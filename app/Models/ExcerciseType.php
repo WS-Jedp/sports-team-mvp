@@ -11,6 +11,8 @@ class ExcerciseType extends Model
 
     public $timestamps = false;
 
+    protected $fillable = ['type'];
+
     public function Excercises()
     {
         return $this->hasMany(Excercise::class, 'type_id', 'id');
